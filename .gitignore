@@ -1,0 +1,26 @@
+# Build output / editor
+.pio/
+.vscode/
+.claude/
+__pycache__/
+*.pyc
+
+# Handover documents (Word / PDF) are delivered separately, not in git
+/handover/
+*.pdf
+*.docx
+*.doc
+*.pptx
+*.xlsx
+*.fig
+*.zip
+
+# Local material that is not part of the code handover
+/docs/
+
+# Host tool outputs (regenerated each run)
+/code/STM_RotaTruck/data/
+*_last.json
+/code/STM_RotaTruck/host/stm_calibration_combined.json
+/code/STM_RotaTruck/host/stm_calibration_middle.json
+/code/STM_RotaTruck/host/stm_calibration_full.json
