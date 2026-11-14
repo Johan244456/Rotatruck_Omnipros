@@ -19,8 +19,8 @@ __pycache__/
 /docs/
 
 # Host tool outputs (regenerated each run)
-/code/STM_RotaTruck/data/
+/code/data/
 *_last.json
-/code/STM_RotaTruck/host/stm_calibration_combined.json
-/code/STM_RotaTruck/host/stm_calibration_middle.json
-/code/STM_RotaTruck/host/stm_calibration_full.json
+/code/host/stm_calibration_combined.json
+/code/host/stm_calibration_middle.json
+/code/host/stm_calibration_full.json

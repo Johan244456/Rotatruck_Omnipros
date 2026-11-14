@@ -20,7 +20,7 @@ Firmware delivered by **OmniPros (DMMS Team 4)** for **Omnia Wheel**, UTS DMMS c
 ```
 Power_Assisted_Rotatruck/
 ├── README.md                     you are here
-└── code/STM_RotaTruck/           the firmware (PlatformIO project)
+└── code/                         the firmware (PlatformIO project)
     ├── platformio.ini            build targets: disco_f407vg (the cart), imu_test, loadcell_test
     ├── src/, include/            firmware source; pins in include/board.h, tuning in include/assist_tuning.h
     ├── host/                     PC tools: live load log, calibration and drift GUIs, calibration record
@@ -33,9 +33,9 @@ Power_Assisted_Rotatruck/
 The firmware is a [PlatformIO](https://platformio.org/) project. Connect the DISC1 with its mini-USB (ST-LINK) cable.
 
 ```sh
-pio run -d code/STM_RotaTruck                 # build the cart firmware
-pio run -d code/STM_RotaTruck -t upload       # flash
-pio device monitor -d code/STM_RotaTruck      # console over RTT
+pio run -d code                 # build the cart firmware
+pio run -d code -t upload       # flash
+pio device monitor -d code      # console over RTT
 ```
 
 The DISC1 has no serial port to the PC, so the console runs over SEGGER RTT through the ST-LINK. Only one program can use the ST-LINK at a time: close the monitor before uploading. The bench bring-up programs are built with `-e imu_test` or `-e loadcell_test`.
@@ -43,7 +43,7 @@ The DISC1 has no serial port to the PC, so the console runs over SEGGER RTT thro
 ## Documentation
 
 - **Handover documents** (Technical Document, User Manual, Wiring Diagrams and Hardware Records, Known Issues and Next Steps, ODrive S1 Setup Guide) are delivered separately as Word / PDF files. Start with the Technical Document to maintain or extend the cart.
-- **Authoritative settings:** [include/board.h](code/STM_RotaTruck/include/board.h) (pins, options, calibration lock) and [include/assist_tuning.h](code/STM_RotaTruck/include/assist_tuning.h) (tuning constants). Where a document and the code disagree, the code wins.
+- **Authoritative settings:** [include/board.h](code/include/board.h) (pins, options, calibration lock) and [include/assist_tuning.h](code/include/assist_tuning.h) (tuning constants). Where a document and the code disagree, the code wins.
 
 ## Project
 
